@@ -15,7 +15,7 @@
         },
         {
             "categoryName": "Normalweight",
-            "title": "You are Normalweight",
+            "title": "Congratulations, You are Normalweight",
             "subTitle": "Here are five tips for you",
             "className": "text-bg-info",
             "points": [
@@ -45,7 +45,7 @@
             "subTitle": "5 tips to lose 10 kg or more in 8 weeks: ",
             "className": "text-bg-danger",
             "points": [
-                "b>Engage in regular physical activity and exercise.-</b>, Regular exercise is vital for both physical and mental health. Increasing the frequency of physical activity in a disciplined and purposeful way is often crucial for successful weight loss. One hour of moderate-intensity activity per day, such as brisk walking, is ideal.",
+                "<b>Engage in regular physical activity and exercise:- </b>, Regular exercise is vital for both physical and mental health. Increasing the frequency of physical activity in a disciplined and purposeful way is often crucial for successful weight loss. One hour of moderate-intensity activity per day, such as brisk walking, is ideal.",
                 "<b>Trying intermittent fasting-</b> ntermittent fasting (IF) is a pattern of eating that involves regular short-term fasts and consuming meals within a shorter time during the day.",
                 "<b>Eat mindfully, Cut Calories, Not Flavor: -</b> Many people benefit from mindful eating, which involves being fully aware of why, how, when, where, and what they eat. Eat more fiber, fiber moves slowly through the digestive tract and can help you feel fuller Trusted Source for longer to support weight loss",
                 "<b>SELF-MONITORING: -</b> Set specific, realistic goals, such as three 15-minute walks per week. If there’s a break in your healthy eating or exercise, try to get back on track as quickly as possible.",

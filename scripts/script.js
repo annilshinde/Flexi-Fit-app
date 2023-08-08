@@ -196,6 +196,8 @@ async function getBmiData(objNum) {
     const modalCard = bmiModal.querySelector('.card');
     const modalSubHeading =  bmiModal.querySelector('.modalSubHeading');
     const bmiSelectedItem = bmi_data.bmi_category[objNum];
+    let olList = bmiModal.querySelector('.card-text ol')
+    olList.innerHTML = " ";
     // console.log(bmiSelectedItem);
     const classList = ["text-bg-dark", "text-bg-info", "text-bg-warning", "text-bg-danger"]
     classList.forEach(el => {
@@ -209,7 +211,6 @@ async function getBmiData(objNum) {
         // console.log(item);
         let list = document.createElement("li");
         list.innerHTML = item;
-        const olList = bmiModal.querySelector('.card-text ol')
         // console.log(olList);
         if(olList.childElementCount <= 4){
             olList.appendChild(list);
