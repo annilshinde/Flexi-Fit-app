@@ -1,23 +1,28 @@
 const users = [
     {
         user: 'janki',
-        pass: '123'
+        pass: '123',
+        gender: 'female'
     },
     {
         user: 'sharad',
-        pass: '123'
+        pass: '123',
+        gender: 'male'
     },
     {
         user: 'nikshit',
-        pass: '123'
+        pass: '123',
+        gender: 'male'
     },
     {
         user: 'archana',
-        pass: '111'
+        pass: '111',
+        gender: 'female'
     }
 ];
 
 let user = "";
+let gender = "";
 const login = function() {
     event.preventDefault()
     const newUser = document.querySelector('#user').value;
@@ -34,9 +39,11 @@ const login = function() {
     users.forEach((i) => {
         if(i.user === newUser){
             user = i.user;
+            gender = i.gender;
             if( i.pass === newPass){
                 window.open("flexi-dashboard.html",'_self');
                 localStorage.setItem("user", user);
+                localStorage.setItem("gender", gender);
             } else {
                 error.classList.remove('d-none');
             }
@@ -47,6 +54,9 @@ const login = function() {
 const allUsersDiv = [...(document.querySelectorAll('.user'))];
 allUsersDiv.forEach(el=> el ? el.innerText = localStorage.getItem("user").toLocaleUpperCase() : '');
 user = localStorage.getItem("user");
+gender = localStorage.getItem("gender");
+
+console.log(gender)
 
 // console.log(user, allUsersDiv);
 
@@ -251,25 +261,37 @@ function calculateBMI() {
 
     if (bmiValue < 18.5) {
         weightConditionElPage.innerText = "Underweight";
-        document.querySelector('#BIM-img img').src = `./images/thin.png`;
+        let imgHolder = document.querySelector('#BIM-img img');
+        let imgHolderPopup = document.querySelector('#BMI-popup-img');
+        gender === "male" && gender !== undefined ?  imgHolder.src = `./images/thin-m.png` : imgHolder.src = `./images/thin-fm.png`;
+        gender === "male" && gender !== undefined ?  imgHolderPopup.src = `./images/thin-m.png` : imgHolderPopup.src = `./images/thin-fm.png`;
         getBmiData(0);
         // removeClass('underweight');
         // scrollto();
     } else if (bmiValue >= 18.5 && bmiValue <= 24.9) {
         weightConditionElPage.innerText = "Normal weight";
-        document.querySelector('#BIM-img img').src = `./images/person.png`;
+        let imgHolder = document.querySelector('#BIM-img img');
+        let imgHolderPopup = document.querySelector('#BMI-popup-img');
+        gender === "male" && gender !== undefined ?  imgHolder.src = `./images/person-m.png` : imgHolder.src = `./images/person-fm.png`;
+        gender === "male" && gender !== undefined ?  imgHolderPopup.src = `./images/person-m.png` : imgHolderPopup.src = `./images/person-fm.png`;
         getBmiData(1);
         // removeClass('normalweight')
         // scrollto();
     } else if (bmiValue >= 25 && bmiValue <= 29.9) {
         weightConditionElPage.innerText = "Overweight";
-        document.querySelector('#BIM-img img').src = `./images/fat-man.png`;
+        let imgHolder = document.querySelector('#BIM-img img');
+        let imgHolderPopup = document.querySelector('#BMI-popup-img');
+        gender === "male" && gender !== undefined ?  imgHolder.src = `./images/fat-m.png` : imgHolder.src = `./images/fat-fm.png`;
+        gender === "male" && gender !== undefined ?  imgHolderPopup.src = `./images/fat-m.png` : imgHolderPopup.src = `./images/fat-fm.png`;
         getBmiData(2);
         // removeClass('overweight')
         // scrollto();
     } else if (bmiValue >= 30) {
         weightConditionElPage.innerText = "Obese";
-        document.querySelector('#BIM-img img').src = `./images/man.png`;
+        let imgHolder = document.querySelector('#BIM-img img');
+        let imgHolderPopup = document.querySelector('#BMI-popup-img');
+        gender === "male" && gender !== undefined ?  imgHolder.src = `./images/obese-m.png` : imgHolder.src = `./images/obese-fm.png`;
+        gender === "male" && gender !== undefined ?  imgHolderPopup.src = `./images/obese-m.png` : imgHolderPopup.src = `./images/obese-fm.png`;
         getBmiData(3);
         // removeClass('obese')
         // scrollto();
