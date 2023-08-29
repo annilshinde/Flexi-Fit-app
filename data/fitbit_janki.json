@@ -1653,7 +1653,7 @@
                 "originDataSourceId": "raw:com.google.step_count.cumulative:samsung:SM-G770F:d1754c9c:step_counter  Non-wakeup",
                 "value": [
                   {
-                    "fpVal": 63.797254273113062,
+                    "fpVal": 2508,
                     "mapVal": []
                   }
                 ]
